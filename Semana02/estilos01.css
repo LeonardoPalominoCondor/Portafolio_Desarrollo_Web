@@ -1,0 +1,20 @@
+/*h1, p, header, footer, nav{
+    background-color: aqua;
+}*/
+
+.flex-container{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
+.flex-container>div{
+    background-color: cadetblue;
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+    width: 60px;
+    text-align: center;
+}

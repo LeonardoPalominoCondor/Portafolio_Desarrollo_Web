@@ -1,0 +1,28 @@
+/*Selector de tipo*/
+div{
+    color:red;
+}
+
+/*Selector de clase*/
+.example{
+    color:blue;
+}
+
+#example1{
+    color:green;
+}
+
+[href]{
+    color:green;
+}
+[href="#vinculo"]{
+    color:yellow;
+}
+
+h1+p{
+    background-color: aqua;
+}
+
+h1~p{
+    background-color: blueviolet;
+}
