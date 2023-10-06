@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráfico de pastel</title>
+    <style>
+        canvas {
+            display: block;
+            margin: 0 auto;
+            background: radial-gradient(circle, #f0f0f0, #ccc);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        }
+        h1 {
+            text-align: center;
+            font-size: 24px;
+            margin-top: 20px;
+            font-family: 'Jost', sans-serif;
+    }
+      </style>
+      
+      <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300&family=Oswald&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Gráfico de Pastel</h1>
+    <canvas id="graficoCanvas" width="400" height="400"></canvas>
+    <script>
+        const canvas = document.getElementById("graficoCanvas");
+        const ctx = canvas.getContext("2d");
+    
+        const data = [0.1, 0.2, 0.3, 0.4]; // Porcentajes de las áreas
+        const colors = ["#FF5733", "#FFC300", "#36A2EB", "#FF33FF"]; // Colores para cada área
+        const labels = ["10%", "20%", "30%", "40%"]; // Etiquetas de porcentaje
+    
+        const centerX = canvas.width / 2;
+        const centerY = canvas.height / 2;
+        const radius = canvas.width / 3;
+        
+            
+        let startAngle = 0;
+        let endAngle = 0;
+    
+        for (let i = 0; i < data.length; i++) {
+          endAngle += data[i] * Math.PI * 2;
+              
+          ctx.beginPath();
+          ctx.moveTo(centerX, centerY);
+          ctx.arc(centerX, centerY, radius, startAngle, endAngle, false);
+          ctx.closePath();
+          ctx.fillStyle = colors[i];
+          ctx.fill();
+    
+          const middleAngle = startAngle + (endAngle - startAngle) / 2;
+              
+          
+          const labelX = centerX + Math.cos(middleAngle) * (radius / 1.5);
+          const labelY = centerY + Math.sin(middleAngle) * (radius / 1.5);
+    
+        
+          ctx.font = "24px 'Jost', sans-serif";
+          ctx.fillStyle = "black";
+          ctx.textAlign = "center";
+          ctx.textBaseline = "middle";
+    
+          
+          ctx.fillText(labels[i], labelX, labelY);
+    
+         
+          startAngle = endAngle;
+        }
+      </script>
+</body>
+</html>
