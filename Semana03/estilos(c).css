@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: blue;
+    height: 80px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 38px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: -.02em;
+    color: white;
+}
+
+.menu {
+    background-color: yellow;
+    float: left; 
+    height: 500px;
+    width: 20%; 
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 38px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: -.02em;
+    color: rgba(239, 1, 1, 0.8);
+}
+
+.main {
+    background-color: gray;
+    float: left;
+    width: 60%; 
+    height: 500px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 38px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: -.02em;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.sidebar {
+    background-color: lightblue;
+    float: left;
+    width: 20%; 
+    height: 500px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 38px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: -.02em;
+    color: rgba(28, 5, 237, 0.8);
+}
+
+.footer {
+    background-color: black;
+    height: 70px;
+    width: 100%;
+    clear: both; 
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 38px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: -.02em;
+    color: rgb(219, 247, 9);
+}
